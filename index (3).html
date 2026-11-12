@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6d4aff">
+<title>MarketGo — Onlayn xaridlar</title>
+<style>
+:root{--purple:#6d4aff;--purple2:#5232d7;--ink:#19172a;--muted:#77758a;--line:#eceaf3;--bg:#f7f7fb;--white:#fff;--green:#16a36a;--shadow:0 12px 35px rgba(32,24,72,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1180px;margin:auto;padding:0 20px}.top{background:#211b3b;color:#eee9ff;font-size:12px;padding:8px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px}.header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #24184b0b}.headrow{height:76px;display:flex;align-items:center;gap:24px}.logo{font-size:25px;font-weight:900;letter-spacing:-1.2px;color:var(--purple);white-space:nowrap}.logo span{color:#19172a}.search{display:flex;flex:1;background:#f5f4fa;border:1px solid #eeeaf7;border-radius:13px;overflow:hidden}.search input{border:0;background:transparent;padding:13px 15px;outline:0;min-width:0;flex:1}.search button,.primary{background:var(--purple);color:#fff;border-radius:10px;padding:12px 18px;font-weight:750}.search button{border-radius:0}.actions{display:flex;gap:10px}.iconbtn{background:#f5f3fb;border-radius:12px;padding:10px 13px;font-weight:700;color:#30294b;position:relative}.count{background:#ff6a79;color:#fff;border-radius:20px;padding:1px 6px;font-size:10px;position:absolute;right:-5px;top:-5px}.nav{border-top:1px solid var(--line);display:flex;gap:22px;overflow:auto;padding:12px 0;color:#5f5a70;font-weight:650;white-space:nowrap}.nav a{color:inherit;text-decoration:none}.hero{margin:26px auto 24px;background:linear-gradient(115deg,#211b3b,#5134b9 62%,#8a70ff);color:#fff;border-radius:24px;padding:38px 42px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:#ffffff17;right:7%;top:-120px}.eyebrow{color:#d8d0ff;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.08;margin:12px 0}.hero p{color:#e7e1ff;max-width:520px}.hero .primary{background:#fff;color:#4f35c6;margin-top:12px}.heroart{display:grid;place-items:center;font-size:116px;position:relative;z-index:1}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 15px}.sectionhead h2{font-size:24px;margin:0;letter-spacing:-.5px}.muted{color:var(--muted)}.cats{display:flex;gap:10px;overflow:auto;padding:2px 0 8px}.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 15px;white-space:nowrap;color:#514c63;font-weight:700}.cat.active{background:#eeeaff;border-color:#cfc5ff;color:#5435d5}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:16px 0}.toolbar select{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;color:#514c63}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:.2s;position:relative}.product:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.photo{height:178px;background:linear-gradient(135deg,#f3f0ff,#f8f7fc);display:grid;place-items:center;position:relative;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.emoji{font-size:66px}.tag{position:absolute;top:11px;left:11px;background:#fff;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:800;color:#5c42cf}.heart{position:absolute;right:10px;top:10px;background:#ffffffdf;border-radius:50%;width:34px;height:34px;font-size:17px}.pbody{padding:13px}.pname{font-weight:750;min-height:44px}.rating{font-size:12px;color:#e39b20;margin:6px 0}.price{font-size:18px;font-weight:900}.old{font-size:12px;color:#aaa;text-decoration:line-through;margin-left:6px}.pfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px}.add{background:#eeeaff;color:#5738d4;border-radius:10px;padding:9px 12px;font-weight:800}.add:hover{background:var(--purple);color:#fff}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0}.feature{background:#fff;border:1px solid var(--line);padding:18px;border-radius:15px}.feature b{display:block;margin:5px 0}.footer{background:#211b3b;color:#eee9ff;margin-top:48px;padding:34px 0}.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.footer p{color:#c5bedb}.footer a{color:#d9d1ff;text-decoration:none;display:block;margin:6px 0}.modalback{position:fixed;inset:0;background:#17132999;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.modalback.show{display:flex}.modal{background:#fff;border-radius:20px;width:min(620px,100%);max-height:90vh;overflow:auto;padding:22px;box-shadow:0 25px 90px #0003}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.modalhead h3{margin:0;font-size:22px}.close{background:#f2f0f7;border-radius:50%;width:34px;height:34px;font-size:20px}.cartline{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.qty{display:flex;align-items:center;gap:8px}.qty button{background:#f0edfa;border-radius:8px;width:27px;height:27px}.remove{background:none;color:#d35d69}.total{display:flex;justify-content:space-between;font-weight:900;font-size:19px;margin:18px 0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px;margin:8px 0}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:750;color:#514c63}.field input,.field textarea,.field select{width:100%;border:1px solid #dedbe8;border-radius:10px;padding:11px;outline-color:var(--purple)}.payoption{display:flex;gap:10px;align-items:center;background:#f8f7fc;padding:12px;border-radius:11px;margin:8px 0}.paynote{background:#fff8e7;border:1px solid #f4e3b8;color:#775b17;padding:11px;border-radius:10px;font-size:12px}.fullbtn{width:100%;margin-top:12px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#211b3b;color:#fff;padding:12px 18px;border-radius:12px;z-index:80;box-shadow:var(--shadow);display:none}.toast.show{display:block}.empty{text-align:center;padding:28px;color:var(--muted)}.badgegreen{color:var(--green);font-weight:800}.hidden{display:none!important}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.headrow{gap:12px}.hero{padding:28px}.heroart{font-size:85px}}
+@media(max-width:620px){.wrap{padding:0 13px}.top .wrap{font-size:10px}.headrow{height:auto;min-height:65px;flex-wrap:wrap;padding:10px 0}.logo{font-size:22px}.search{order:3;flex-basis:100%}.actions{margin-left:auto}.nav{gap:17px}.hero{grid-template-columns:1fr;padding:26px 22px;margin-top:16px}.heroart{display:none}.hero h1{font-size:34px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{height:140px}.pbody{padding:10px}.pname{font-size:13px}.price{font-size:16px}.features{grid-template-columns:1fr}.footergrid{grid-template-columns:1fr 1fr}.footergrid>div:first-child{grid-column:1/-1}.toolbar{align-items:start;flex-direction:column}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.iconbtn{padding:9px 10px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>🚚 Toshkent bo‘ylab qulay yetkazib berish</span><span>Har kuni 09:00–21:00 · Demo loyiha</span></div></div>
+<header class="header"><div class="wrap">
+ <div class="headrow"><a class="logo" href="#">Market<span>Go</span>.</a>
+  <div class="search"><input id="search" placeholder="Mahsulot yoki kategoriya qidiring..." aria-label="Qidiruv"><button id="searchBtn">Qidirish</button></div>
+  <div class="actions"><button class="iconbtn" id="favBtn">♡ <span class="count" id="favCount">0</span></button><button class="iconbtn" id="cartBtn">🛒 <span class="count" id="cartCount">0</span></button></div>
+ </div>
+ <nav class="nav"><a href="#catalog">Katalog</a><a href="#advantages">Afzalliklar</a><a href="#about">Biz haqimizda</a><a href="#contact">Aloqa</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero"><div><div class="eyebrow">Yangi avlod onlayn do‘koni</div><h1>Kerakli mahsulotlar — bir joyda.</h1><p>Texnika, uy-ro‘zg‘or, moda va kundalik xaridlar. Qulay tanlang, savatchaga qo‘shing va buyurtma bering.</p><a class="primary" href="#catalog" style="display:inline-block;text-decoration:none">Xaridni boshlash →</a></div><div class="heroart">🛍️</div></section>
+<section id="catalog"><div class="sectionhead"><div><div class="eyebrow" style="color:var(--purple)">MarketGo katalogi</div><h2>Ommabop mahsulotlar</h2></div><span class="muted" id="resultCount"></span></div>
+<div class="cats" id="cats"></div>
+<div class="toolbar"><span class="muted">O‘zingizga mos mahsulotni tanlang</span><select id="sort"><option value="popular">Ommabopligi bo‘yicha</option><option value="low">Narx: arzondan qimmatga</option><option value="high">Narx: qimmatdan arzonga</option><option value="name">Nomi bo‘yicha</option></select></div>
+<div class="grid" id="products"></div>
+</section>
+<section class="features" id="advantages"><div class="feature">🚚 <b>Qulay yetkazib berish</b><span class="muted">Buyurtmangiz manzilingizga yetkaziladi.</span></div><div class="feature">🔒 <b>Xavfsiz buyurtma</b><span class="muted">Ma’lumotlaringiz demo rejimida saqlanadi.</span></div><div class="feature">💬 <b>Yordam xizmati</b><span class="muted">Savollaringiz bo‘lsa, biz bilan bog‘laning.</span></div></section>
+<section class="feature" id="about"><h2>MarketGo haqida</h2><p class="muted">MarketGo — onlayn savdo platformasi uchun o‘quv-demonstratsion loyiha. Mahsulotlar, savatcha va buyurtma jarayoni brauzerda ishlaydi. Haqiqiy savdo va to‘lovlar ulangan emas.</p></section>
+</main>
+<footer class="footer" id="contact"><div class="wrap footergrid"><div><div class="logo" style="color:#b9aaff">Market<span style="color:white">Go.</span></div><p>Qulay xaridlar dunyosi. Ushbu sayt AWS S3 orqali joylashtirilgan demo loyiha.</p></div><div><b>Bo‘limlar</b><a href="#catalog">Katalog</a><a href="#advantages">Afzalliklar</a><a href="#about">Biz haqimizda</a></div><div><b>Aloqa</b><a href="mailto:hello@marketgo.example">hello@marketgo.example</a><span>Demo loyiha · 2026</span></div></div></footer>
+<div class="modalback" id="cartModal"><div class="modal"><div class="modalhead"><h3>Savatcha</h3><button class="close" data-close="cartModal">×</button></div><div id="cartItems"></div><div class="total"><span>Jami:</span><span id="cartTotal">0 so‘m</span></div><button class="primary fullbtn" id="checkoutBtn">Buyurtmani rasmiylashtirish</button></div></div>
+<div class="modalback" id="checkoutModal"><div class="modal"><div class="modalhead"><h3>Buyurtma rasmiylashtirish</h3><button class="close" data-close="checkoutModal">×</button></div>
+<form id="checkoutForm"><div class="formgrid">
+<div class="field"><label for="custName">Ism-familiya *</label><input id="custName" required minlength="3" placeholder="Ismingiz"></div>
+<div class="field"><label for="custPhone">Telefon *</label><input id="custPhone" required type="tel" placeholder="+998 90 123 45 67" pattern="[+0-9 ()-]{9,18}"></div>
+<div class="field full"><label for="custAddress">Yetkazib berish manzili *</label><input id="custAddress" required placeholder="Tuman, ko‘cha, uy"></div>
+<div class="field full"><label for="custComment">Izoh (ixtiyoriy)</label><textarea id="custComment" rows="2" placeholder="Mo‘ljal yoki qo‘shimcha ma’lumot"></textarea></div>
+<div class="field full"><label>To‘lov usuli</label>
+<label class="payoption"><input type="radio" name="pay" value="cash" checked> Yetkazilganda naqd / karta orqali</label>
+<label class="payoption"><input type="radio" name="pay" value="online"> Onlayn karta to‘lovi (demo)</label>
+<div class="paynote">Onlayn to‘lov hozircha sinov rejimida. Karta raqami yoki CVV kiritmang — haqiqiy pul yechilmaydi. Click/Payme kabi provayder integratsiyasi hali ulanmagan.</div></div></div>
+<div class="total"><span>Buyurtma summasi:</span><span id="checkoutTotal">0 so‘m</span></div><button class="primary fullbtn" type="submit">Buyurtmani tasdiqlash</button></form></div></div>
+<div class="modalback" id="successModal"><div class="modal"><div class="modalhead"><h3>Buyurtma qabul qilindi!</h3><button class="close" data-close="successModal">×</button></div><div class="empty"><div style="font-size:55px">✅</div><h2>Rahmat!</h2><p id="successText">Buyurtmangiz demo rejimida yaratildi.</p><p class="muted">Bu sinov buyurtmasi. Do‘kon egasiga avtomatik yuborilmaydi va haqiqiy to‘lov amalga oshmaydi.</p><button class="primary" data-close="successModal">Davom etish</button></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const products=[
+{id:1,n:"Smartfon Nova X12",c:"Texnika",p:2899000,old:3299000,e:"📱",tag:"Top sotuv",r:4.9},
+{id:2,n:"Simsiz quloqchin AirBeat",c:"Texnika",p:249000,old:319000,e:"🎧",tag:"Chegirma",r:4.8},
+{id:3,n:"Aqlli soat Fit Pro",c:"Texnika",p:399000,old:459000,e:"⌚",tag:"Yangi",r:4.7},
+{id:4,n:"Blender HomeMix",c:"Uy uchun",p:329000,old:0,e:"🥤",tag:"",r:4.6},
+{id:5,n:"Kofe qaynatgich",c:"Uy uchun",p:579000,old:649000,e:"☕",tag:"Chegirma",r:4.8},
+{id:6,n:"Stol chirog‘i LED",c:"Uy uchun",p:159000,old:0,e:"💡",tag:"",r:4.5},
+{id:7,n:"Erkaklar krossovkasi",c:"Moda",p:449000,old:529000,e:"👟",tag:"Ommabop",r:4.7},
+{id:8,n:"Kundalik ryukzak",c:"Moda",p:219000,old:0,e:"🎒",tag:"",r:4.6},
+{id:9,n:"Sport futbolkasi",c:"Moda",p:129000,old:159000,e:"👕",tag:"Chegirma",r:4.5},
+{id:10,n:"Bolalar konstruktori",c:"Bolalar",p:189000,old:0,e:"🧩",tag:"",r:4.9},
+{id:11,n:"Yumshoq o‘yinchoq",c:"Bolalar",p:99000,old:0,e:"🧸",tag:"",r:4.8},
+{id:12,n:"Termos 500 ml",c:"Aksessuarlar",p:89000,old:119000,e:"🧴",tag:"Chegirma",r:4.6}
+];
+const categories=["Barchasi",...new Set(products.map(p=>p.c))];
+let category="Barchasi",query="",sort="popular";
+let cart=JSON.parse(localStorage.getItem("mg_cart")||"{}");
+let fav=JSON.parse(localStorage.getItem("mg_fav")||"[]");
+let onlyFav=false;
+const money=n=>new Intl.NumberFormat("uz-UZ").format(n)+" so‘m";
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem("mg_cart",JSON.stringify(cart));localStorage.setItem("mg_fav",JSON.stringify(fav));updateCounts()}
+function updateCounts(){$("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);$("favCount").textContent=fav.length}
+function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200)}
+function renderCats(){$("cats").innerHTML=categories.map(c=>`<button class="cat ${category===c?"active":""}" data-cat="${c}">${c}</button>`).join("")}
+function renderProducts(){
+let list=products.filter(p=>(category==="Barchasi"||p.c===category)&&(!onlyFav||fav.includes(p.id))&&(p.n.toLowerCase().includes(query)||p.c.toLowerCase().includes(query)));
+if(sort==="low")list.sort((a,b)=>a.p-b.p);if(sort==="high")list.sort((a,b)=>b.p-a.p);if(sort==="name")list.sort((a,b)=>a.n.localeCompare(b.n,"uz"));
+$("resultCount").textContent=list.length+" ta mahsulot";
+$("products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="photo"><span class="emoji">${p.e}</span>${p.tag?`<span class="tag">${p.tag}</span>`:""}<button class="heart" data-fav="${p.id}" aria-label="Sevimliga qo‘shish">${fav.includes(p.id)?"❤️":"♡"}</button></div><div class="pbody"><div class="pname">${p.n}</div><div class="rating">★ ${p.r} <span class="muted">· Demo reyting</span></div><div><span class="price">${money(p.p)}</span>${p.old?`<span class="old">${money(p.old)}</span>`:""}</div><div class="pfoot"><span class="muted" style="font-size:11px">${p.c}</span><button class="add" data-add="${p.id}">+ Savatga</button></div></div></article>`).join(""):`<div class="empty" style="grid-column:1/-1">Mahsulot topilmadi. Boshqa so‘z bilan qidiring.</div>`;
+}
+function open(id){$(id).classList.add("show")}function close(id){$(id).classList.remove("show")}
+function renderCart(){
+let entries=Object.entries(cart).filter(([id,q])=>q>0);
+$("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `<div class="cartline"><div><b>${p.e} ${p.n}</b><div class="muted">${money(p.p)}</div></div><div class="qty"><button data-dec="${id}">−</button><b>${q}</b><button data-inc="${id}">+</button></div><button class="remove" data-remove="${id}">O‘chirish</button></div>`}).join(""):`<div class="empty">Savatchangiz hozircha bo‘sh 🛒</div>`;
+let total=entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).p*q,0);$("cartTotal").textContent=money(total);$("checkoutTotal").textContent=money(total);$("checkoutBtn").disabled=!entries.length;$("checkoutBtn").style.opacity=entries.length?1:.5;return total;
+}
+$("cats").addEventListener("click",e=>{let b=e.target.closest("[data-cat]");if(b){category=b.dataset.cat;onlyFav=false;renderCats();renderProducts()}});
+$("products").addEventListener("click",e=>{let a=e.target.closest("[data-add]"),f=e.target.closest("[data-fav]");if(a){let id=a.dataset.add;cart[id]=(cart[id]||0)+1;save();toast("Mahsulot savatchaga qo‘shildi");}if(f){let id=+f.dataset.fav;fav=fav.includes(id)?fav.filter(x=>x!==id):[...fav,id];save();renderProducts()}});
+$("search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();renderProducts()});$("searchBtn").onclick=()=>{query=$("search").value.trim().toLowerCase();renderProducts()};
+$("sort").onchange=e=>{sort=e.target.value;renderProducts()};
+$("favBtn").onclick=()=>{onlyFav=!onlyFav;category="Barchasi";renderCats();renderProducts();document.querySelector("#catalog").scrollIntoView()};
+$("cartBtn").onclick=()=>{renderCart();open("cartModal")};
+$("cartItems").addEventListener("click",e=>{let id=e.target.dataset.inc||e.target.dataset.dec||e.target.dataset.remove;if(!id)return;if(e.target.dataset.inc)cart[id]=(cart[id]||0)+1;if(e.target.dataset.dec)cart[id]=Math.max(0,(cart[id]||0)-1);if(e.target.dataset.remove)delete cart[id];if(cart[id]===0)delete cart[id];save();renderCart()});
+$("checkoutBtn").onclick=()=>{if(!Object.keys(cart).length)return;close("cartModal");renderCart();open("checkoutModal")};
+$("checkoutForm").onsubmit=e=>{e.preventDefault();let total=renderCart();let order={id:"MG"+Date.now().toString().slice(-7),date:new Date().toLocaleString("uz-UZ"),name:$("custName").value,phone:$("custPhone").value,address:$("custAddress").value,comment:$("custComment").value,payment:new FormData(e.target).get("pay"),items:cart,total,status:"Demo buyurtma"};let orders=JSON.parse(localStorage.getItem("mg_orders")||"[]");orders.unshift(order);localStorage.setItem("mg_orders",JSON.stringify(orders));$("successText").textContent=`Buyurtma raqami: ${order.id}. Jami: ${money(total)}.`;cart={};save();e.target.reset();close("checkoutModal");open("successModal")};
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>close(b.dataset.close));
+document.querySelectorAll(".modalback").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)close(m.id)}));
+renderCats();renderProducts();updateCounts();
+</script>
+</body></html>
